@@ -6,7 +6,7 @@ createApp({
             todoList: [
                 {
                     text: 'buy potatoes',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'bau',
@@ -23,5 +23,11 @@ createApp({
             ]
         }
     },
+    methods: {
+        toggleDone: function(index){
+            this.todoList[index].done = !(this.todoList[index].done);
+            console.log(this.todoList[index].done)
+        }
+    }
     
 }).mount('#app')

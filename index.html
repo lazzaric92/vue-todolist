@@ -21,7 +21,7 @@
                 <section class="todolist-wrapper">
                     <ul class="todolist">
                         <li v-for="(item, index) in todoList" :key="item.index">
-                            <p :class="(item.done === true) ? 'done' : '' "> {{ item.text }} </p>
+                            <p :class="(item.done === true) ? 'done' : '' "  @click="toggleDone(index)"> {{ item.text }} </p>
                         </li>
                     </ul>
                 </section>

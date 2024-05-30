@@ -43,7 +43,11 @@ ul.todolist {
     cursor: pointer;
 }
 
+.todolist li p{
+    font-weight: 600;
+}
+
 .todolist li p.done {
     text-decoration: line-through;
-    color: #444444;
+    color: grey;
 }
