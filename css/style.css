@@ -6,7 +6,7 @@
 
 /* || GENERAL */
 body{
-    font-family: sans-serif;
+    font-family: "LXGW WenKai Mono TC", monospace;
 }
 
 .container {
@@ -17,8 +17,15 @@ body{
 .todolist li,
 .add-todo input,
 .add-todo label,
-.buttons i {
+.buttons i,
+.todolist-wrapper > p,
+.todolist li input {
     font-size: 1.2rem;
+}
+
+input {
+    font-family: "LXGW WenKai Mono TC", monospace;
+    border: none;
 }
 
 /* || UTILS */
@@ -42,7 +49,6 @@ body{
 
 /* || HEADER */
 header {
-    text-align: center;
     padding: 1.5rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -65,7 +71,6 @@ ul.todolist {
 .todolist li {
     margin: .8rem;
     background-color: white;
-    padding: .8rem;
 }
 
 /* .todolist li p::before{
@@ -76,8 +81,10 @@ ul.todolist {
     margin-right: 1rem;
 } */
 
-.todolist li p{
-    font-weight: 600;
+.todolist li p,
+.todolist li input{
+    font-weight: bold;
+    padding: .8rem;
 }
 
 .todolist li p.done {
@@ -85,10 +92,33 @@ ul.todolist {
     color: grey;
 }
 
+.todolist div.change-task{
+    width: calc(100% - 80px);
+}
+
+.todolist li input{
+    border-radius: 8px 0 0 8px;
+    width: 96%;
+}
+
 /* 
 ul.todolist li p.done::before{
     color: green;
 } */
+
+.buttons {
+    margin-right: .3rem;
+}
+
+.buttons i{
+    margin: 0 .5rem;
+}
+
+.todolist-wrapper > p{
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 /* || ADD-TODO */
 .add-todo {
@@ -109,5 +139,5 @@ ul.todolist li p.done::before{
     margin: 0 1rem;
     flex-grow: 1;
     padding: .3rem .6rem;
-    border: none;
+    font-weight: bold;
 }
