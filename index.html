@@ -11,7 +11,22 @@
 </head>
 <body>
     <div id="app"> 
-        
+        <header>
+            <div class="container">
+                <h1>My todolist</h1>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section class="todolist-wrapper">
+                    <ul class="todolist">
+                        <li v-for="(item, index) in todoList" :key="item.index">
+                            <p :class="(item.done === true) ? 'done' : '' "> {{ item.text }} </p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
     </div>
 
     <script src="js/script.js"></script>

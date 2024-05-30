@@ -3,3 +3,47 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background-color: #7b0eac;
+    color: white;
+}
+
+.todolist-wrapper {
+    margin: 0 auto;
+}
+
+ul.todolist {
+    list-style-type: none;
+    background-color:#D79BE9;
+
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.todolist li {
+    margin: .8rem;
+    background-color: white;
+    padding: .8rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.todolist li p.done {
+    text-decoration: line-through;
+    color: #444444;
+}
