@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* || GENERAL */
 body{
     font-family: sans-serif;
 }
@@ -13,36 +14,58 @@ body{
     margin: 0 auto;
 }
 
+.todolist li,
+.add-todo input,
+.add-todo label,
+.buttons i {
+    font-size: 1.2rem;
+}
+
+/* || UTILS */
+.center-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b-radius-8{
+    border-radius: 8px;
+}
+
+.b-radius-12{
+    border-radius: 12px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+/* || HEADER */
 header {
     text-align: center;
     padding: 1.5rem;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     background-color: #7b0eac;
     color: white;
 }
 
+
+/* || MAIN */
 .todolist-wrapper {
-    margin: 0 auto;
+    margin: 0 auto 2rem;
 }
 
 ul.todolist {
     list-style-type: none;
     background-color:#D79BE9;
-
     padding: 1rem;
-    border-radius: 12px;
 }
 
 .todolist li {
     margin: .8rem;
     background-color: white;
     padding: .8rem;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 /* .todolist li p::before{
@@ -55,7 +78,6 @@ ul.todolist {
 
 .todolist li p{
     font-weight: 600;
-    cursor: pointer;
 }
 
 .todolist li p.done {
@@ -68,8 +90,24 @@ ul.todolist li p.done::before{
     color: green;
 } */
 
-li .buttons i {
-    font-size: 1.3rem;
-    cursor: pointer;
+/* || ADD-TODO */
+.add-todo {
+    background-color: #7b0eac;
+    color: white;
+    padding: 1rem;
 }
 
+.add-todo button {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: .5rem;
+    color: #7b0eac;
+}
+
+#add-task-input{
+    margin: 0 1rem;
+    flex-grow: 1;
+    padding: .3rem .6rem;
+    border: none;
+}

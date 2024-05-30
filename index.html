@@ -21,14 +21,21 @@
         <main>
             <div class="container">
                 <section class="todolist-wrapper">
-                    <ul class="todolist">
-                        <li v-for="(item, index) in todoList" :key="item.index">
-                            <p :class="(item.done === true) ? 'done' : '' "  @click="toggleDone(index)"> {{ item.text }} </p>
+                    <ul class="todolist b-radius-12">
+                        <li v-for="(item, index) in todoList" :key="item.index" class="center-between b-radius-8">
+                            <p class="cursor-pointer" :class="(item.done === true) ? 'done' : '' "  @click="toggleDone(index)"> {{ item.text }} </p>
                             <div class="buttons">
-                                <i class="fa-regular fa-trash-can" @click="removeTask(index)"></i>
+                                <i class="fa-regular fa-trash-can cursor-pointer" @click="removeTask(index)"></i>
                             </div>
                         </li>
                     </ul>
+                </section>
+                <section class="add-todo center-between b-radius-12">
+                    <label for="add-task-input">Type a task to add</label>
+                    <input type="text" id="add-task-input" class="b-radius-8" v-model="newTaskContent" @keyup.enter="addNewTask(newTaskContent)">
+                    <button class="b-radius-8 cursor-pointer" @click="addNewTask(newTaskContent)">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
                 </section>
             </div>
         </main>

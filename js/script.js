@@ -20,7 +20,8 @@ createApp({
                     text: 'boh',
                     done: false
                 },
-            ]
+            ],
+            newTaskContent: '',
         }
     },
     methods: {
@@ -31,6 +32,20 @@ createApp({
 
         removeTask: function(index){
             this.todoList.splice(index, 1);
+        },
+
+        addNewTask: function(content){
+            const newTask = {
+                text: content,
+                done: false,
+            }
+
+            this.todoList.push(newTask);
+            this.clearNewTaskContent();
+        },
+
+        clearNewTaskContent: function(){
+            this.newTaskContent = '';
         }
     }
     
