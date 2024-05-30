@@ -27,6 +27,10 @@ createApp({
         toggleDone: function(index){
             this.todoList[index].done = !(this.todoList[index].done);
             console.log(this.todoList[index].done)
+        },
+
+        removeTask: function(index){
+            this.todoList.splice(index, 1);
         }
     }
     

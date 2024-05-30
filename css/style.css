@@ -37,17 +37,39 @@ ul.todolist {
 .todolist li {
     margin: .8rem;
     background-color: white;
-    padding: .8rem 1.5rem;
+    padding: .8rem;
     font-size: 1.2rem;
     border-radius: 8px;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+/* .todolist li p::before{
+    content: '\f00c';
+    font-family: "Font Awesome 6 Free";
+    font: var(--fa-font-solid);
+    color: transparent;
+    margin-right: 1rem;
+} */
 
 .todolist li p{
     font-weight: 600;
+    cursor: pointer;
 }
 
 .todolist li p.done {
     text-decoration: line-through;
     color: grey;
 }
+
+/* 
+ul.todolist li p.done::before{
+    color: green;
+} */
+
+li .buttons i {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+

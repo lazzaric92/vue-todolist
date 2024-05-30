@@ -11,7 +11,7 @@ Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 
 MILESTONE 2
 Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
-// Accanto al 'p' ci sarà uno 'span' contenente un'icona, cliccando la quale l'oggetto a quell'indice verrà eliminato dall'array.
+// Accanto al 'p' ci sarà una 'i', cliccando la quale l'oggetto a quell'indice verrà eliminato dall'array.
 
 MILESTONE 3
 Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante o premendo il tasto invio, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
