@@ -27,18 +27,29 @@
                 <section class="todolist-wrapper">
                     <ul class="todolist b-radius-12" v-if="(todoList.length > 0)">
                         <li v-for="(item, index) in todoList" :key="item.index" class="center-between b-radius-8">
-                            <p v-if="item.toChange === false" class="cursor-pointer" :class="(item.done === true) ? 'done' : '' "  @click="toggleDone(index)"> {{ item.text }} </p>
+                            <p v-if="item.toChange === false" class="cursor-pointer" :class="(item.done === true) ? 'done' : '' "  @click="markAsCompleted(index)"> {{ item.text }} </p>
                             <div v-else class="change-task center-between">
                                 <input type="text" v-model="item.text">
                                 <i class="fa-solid fa-check cursor-pointer" @click="acceptChanges(index)"></i>
                             </div>
                             <div class="buttons">
                                 <i class="fa-solid fa-pencil cursor-pointer" @click="changeTask(index)"></i>
-                                <i class="fa-regular fa-trash-can cursor-pointer" @click="removeTask(index)"></i>
+                                <i class="fa-regular fa-trash-can cursor-pointer" @click="removeTodoTask(index)"></i>
                             </div>
                         </li>
                     </ul>
                     <p v-else>There are no tasks yet, add a new one!</p>
+                </section>
+                <section class="completed-tasks">
+                    <hr v-if="(completedTasks.length > 0)">
+                    <ul class="todolist b-radius-12" v-if="(completedTasks.length > 0)">
+                        <li v-for="(item, index) in completedTasks" :key="item.index" class="center-between b-radius-8">
+                            <p class="cursor-pointer" :class="(item.done === true) ? 'done' : '' "  @click="reverseToTodo(index)"> {{ item.text }} </p>
+                            <div class="buttons">
+                                <i class="fa-regular fa-trash-can cursor-pointer" @click="removeCompletedTask(index)"></i>
+                            </div>
+                        </li>
+                    </ul>
                 </section>
                 <section class="add-todo center-between b-radius-12">
                     <label for="add-task-input">Type a task to add</label>

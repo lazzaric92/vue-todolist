@@ -58,7 +58,9 @@ header {
 
 
 /* || MAIN */
-.todolist-wrapper {
+.todolist-wrapper,
+.completed-tasks,
+.completed-tasks hr {
     margin: 0 auto 2rem;
 }
 
@@ -85,6 +87,8 @@ ul.todolist {
 .todolist li input{
     font-weight: bold;
     padding: .8rem;
+    border-radius: 8px 0 0 8px;
+    width: 90%;
 }
 
 .todolist li p.done {
@@ -94,11 +98,6 @@ ul.todolist {
 
 .todolist div.change-task{
     width: calc(100% - 80px);
-}
-
-.todolist li input{
-    border-radius: 8px 0 0 8px;
-    width: 96%;
 }
 
 /* 

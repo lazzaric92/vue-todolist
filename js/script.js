@@ -26,16 +26,31 @@ createApp({
                 },
             ],
             newTaskContent: '',
-            
+            completedTasks: [],
         }
     },
     methods: {
-        toggleDone: function(index){
-            this.todoList[index].done = !(this.todoList[index].done);
+        markAsCompleted: function(index){
+            if(this.todoList[index].done === false){
+                this.todoList[index].done = true;
+                this.completedTasks.push(this.todoList[index]);
+                this.todoList.splice(index, 1);
+            }
+        },
+        reverseToTodo: function(index){
+            if(this.completedTasks[index].done === true){
+                this.completedTasks[index].done = false;
+                this.todoList.push(this.completedTasks[index]);
+                this.completedTasks.splice(index, 1);
+            }
         },
 
-        removeTask: function(index){
+        removeTodoTask: function(index){
             this.todoList.splice(index, 1);
+        },
+
+        removeCompletedTask: function(index){
+            this.completedTasks.splice(index, 1);
         },
 
         addNewTask: function(content){
