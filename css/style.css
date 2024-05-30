@@ -75,14 +75,6 @@ ul.todolist {
     background-color: white;
 }
 
-/* .todolist li p::before{
-    content: '\f00c';
-    font-family: "Font Awesome 6 Free";
-    font: var(--fa-font-solid);
-    color: transparent;
-    margin-right: 1rem;
-} */
-
 .todolist li p,
 .todolist li input{
     font-weight: bold;
@@ -99,11 +91,6 @@ ul.todolist {
 .todolist div.change-task{
     width: calc(100% - 80px);
 }
-
-/* 
-ul.todolist li p.done::before{
-    color: green;
-} */
 
 .buttons {
     margin-right: .3rem;
